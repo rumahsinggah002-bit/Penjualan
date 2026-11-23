@@ -9,8 +9,8 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Kas Jualan">
-<title>Kas Jualan</title>
+<meta name="apple-mobile-web-app-title" content="Bakaran Mas Bios">
+<title>Bakaran Mas Bios</title>
 <style>
 :root{--bg:#F5F7F4;--card:#fff;--ink:#14231D;--mut:#68766F;--line:#DDE4DF;--g:#0F5F4A;--r:#C73E3E;--on:#fff;--key:#EAEFEC;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -82,11 +82,13 @@ h2{margin:26px 4px 10px}
 .item .n b{font-weight:600}
 .tools button{border-radius:14px;box-shadow:var(--sh);border:0;padding:12px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.brand{font-weight:800;font-size:16px;margin-bottom:10px;letter-spacing:-.2px}
 </style>
 </head>
 <body>
 <main>
 <section class="hero">
+<div class="brand">Bakaran Mas Bios</div>
 <div class="top"><span>Saldo hari ini</span><span id="dt"></span></div>
 <div class="total" id="tot">Rp0</div>
 <div class="mm"><span>↑ Masuk <b id="mi">Rp0</b></span><span>↓ Keluar <b id="mo">Rp0</b></span></div>
@@ -162,7 +164,7 @@ $('clr').onclick=function(){if(S.length&&confirm('Hapus semua catatan? Ini tidak
 $('cp').onclick=function(){
  var tk=dkey(Date.now()),mi=0,mo=0;
  S.forEach(function(x){if(dkey(x.t)===tk){if(x.v>0)mi+=x.v;else mo+=-x.v}});
- var txt='Rekap '+dlab(Date.now())+'\nMasuk: '+rp(mi)+'\nKeluar: '+rp(mo)+'\nSaldo: '+rp(mi-mo);
+ var txt='Bakaran Mas Bios\nRekap '+dlab(Date.now())+'\nMasuk: '+rp(mi)+'\nKeluar: '+rp(mo)+'\nSaldo: '+rp(mi-mo);
  try{navigator.clipboard.writeText(txt).then(function(){$('cp').textContent='Tersalin'},function(){alert(txt)})}catch(e){alert(txt)}
  setTimeout(function(){$('cp').textContent='Salin rekap hari ini'},1500)};
 render();

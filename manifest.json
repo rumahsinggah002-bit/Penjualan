@@ -1,6 +1,6 @@
 {
-  "name": "Kas Jualan",
-  "short_name": "Kas Jualan",
+  "name": "Bakaran Mas Bios",
+  "short_name": "Bakaran Mas Bios",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
